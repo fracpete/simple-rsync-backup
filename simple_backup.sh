@@ -3,7 +3,7 @@
 # Script for backing up directories to a backup dir, optionally
 # on a remote host.
 # 
-# Format of simple_backup.list:
+# Format:
 # name TAB source_dir TAB dir_alias
 #
 # for each "name" an exclude file can be specified
@@ -122,6 +122,16 @@ do
          ;;
    esac
 done
+
+# rsync present?
+if [ ! -x "/usr/bin/rsync" ]
+then
+  echo "rsync not installed!"
+  echo "You can install it with:"
+  echo "- Debian/Ubuntu: sudo apt install rsync"
+  echo "- Fedora/CentOS: sudo yum install rsync"
+  exit 10
+fi
 
 # checks
 if [ "$BACKUPDIR" = "" ]
