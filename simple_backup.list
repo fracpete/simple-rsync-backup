@@ -1,0 +1,7 @@
+# lists directories to back up
+# format:
+# name TAB source_dir TAB dir_alias
+# comment line starting with # and empty lines are ignored
+
+#etc	/etc	etc
+#home	/home/USER	home_USER

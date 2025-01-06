@@ -1,0 +1,8 @@
+.gvfs
+.kde
+.cache
+.dbus
+.local/share/Trash
+.thumbnails
+*~
+*.swp
